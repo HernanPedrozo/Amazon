@@ -1,7 +1,6 @@
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+import Cartwidget from '../Cartwidget';
 import './Navbar.css';
+
 
 function Navbar() {
 return (
@@ -9,21 +8,23 @@ return (
     <nav className="mainNav">
         <ul className="mainNav__lista">
             <div className="logo">
-                <li>
-                    <a className="brand" href="">KHP Shop</a>
-                </li>
+                <i>
+                    <button className="brand">KHP Shop</button>
+                </i>
             </div>
             <li className="mainNav__item">
-                <a className="mainNav__link" href="">Inicio</a>
+                <button className="mainNav__link">Inicio</button>
             </li>
             <li className="mainNav__item">
-                <a className="mainNav__link" href="">Galeria</a>
+            <button className="mainNav__link">Galeria</button>
             </li>
             <li className="mainNav__item">
-                <a className="mainNav__link" href="">Contacto</a>
+            <button className="mainNav__link">Contacto</button>
             </li>
             <li className="mainNav__item">
-                <a className="mainNav__link" href="">carrito</a>
+            <button className="mainNav__link">
+                <Cartwidget/>
+            </button>
             </li>
         </ul>
     </nav>
