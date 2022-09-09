@@ -8,9 +8,9 @@ return (
     <nav className="mainNav">
         <ul className="mainNav__lista">
             <div className="logo">
-                <i>
+                <li>
                     <button className="brand">KHP Shop</button>
-                </i>
+                </li>
             </div>
             <li className="mainNav__item">
                 <button className="mainNav__link">Inicio</button>
