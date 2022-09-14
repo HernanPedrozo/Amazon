@@ -1,29 +1,35 @@
 import { useState } from 'react'
-function Counter() {
-    const [count, setCount] = useState (0)
-    
+
+const Counter = ({stock, onAdd}) => {
+
+
+    const [count, setCount] = useState (1)
+
 
     const increment = () => {
-    
-        setCount ( count +1 )
-    
-    }    
+        if (count < stock){
+            setCount ( count + 1 )
+
+        }
+
+    }
 
     const decrement = () => {
-
-        setCount ( count - 1 )
-
-    }    
+        if (count > 1) {
+            setCount ( count - 1 )
+        }
+        
+    }
 
     return (
-    <div>
+        <div>
 
-        <h1>{count}</h1>
-        <button onClick={decrement}>Decrementar</button>    
-        <button  onClick={increment}>Incrementar</button>
-        
-    </div>
-    
+            <h1>{count}</h1>
+            <button onClick={decrement}>Decrementar</button>
+            <button onClick={increment}>Incrementar</button>
+            <button onClick={() => onAdd(count)}>Agregar al carrito</button>
+        </div>
+
     )
 }
 
