@@ -1,11 +1,14 @@
+import './Item.css';
 
 const Item = ({product}) => {
 
     return (
-        <li>
-            <h3> {product.name} </h3>
-            
-        </li>
+        <article className="CardItem">
+
+            <li>
+                <h3> {product.name} </h3>                 
+            </li>
+        </article>
     )
 }
 
