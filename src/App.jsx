@@ -1,8 +1,8 @@
-import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css'
-import Header from "./components/Header";
+import Header from "./components/Header"; 
 import Itemlistcontainer from './components/ItemListContainer';
 import Counter from './components/Counter';
+
+import './App.css';
 
 function App() {
 
@@ -13,7 +13,7 @@ function App() {
     <div className="App">
         <Header />
         <Itemlistcontainer greeting='Catalogo'/>
-        <Counter stock= {10} onAdd= {handleOnAdd}/>|
+        <Counter stock={10} onAdd={handleOnAdd}/>|
     </div>
   );
 }
