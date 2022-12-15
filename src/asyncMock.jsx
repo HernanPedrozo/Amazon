@@ -1,86 +1,76 @@
 const products = [
     {
-        "id": 1,
-        "category" : "monitor",
-        "name": "Monitor Led 24 Asus Full Hd 165Hz",
-        "price": 47.789,
-        "image": "/img/MonitorLed24.jpeg",
-        "stock": 1,
-        "featured": "false"
+        "id": "1",
+        "category" : "samsung",
+        "name": "Samsung Galaxy samsungA53 5G 128 GB 6 GB RAM",
+        "price": 129.999,
+        "image": "../img/samsungA53.png",
+        "stock": 2
         },  
     {
-        "id": 2,
-        "category" : "placa de video",
-        "name": "Placa De Video GeForce RTX 3080 Ti 12Gb Msi",
-        "price": 400.999,
-        "image": "/img/GeForceRTX3080.jpeg",
-        "stock": 1,
-        "destacado": "false"
+        "id": "2",
+        "category" : "samsung",
+        "name": "Samsung Galaxy Z Flip 4 256 GB 8 GB RAM",
+        "price": 249.999,
+        "image": "../img/samsungflip.png",
+        "stock": 7
         },
     {
-        "id": 3,
-        "category" : "procesador",
-        "name": "Procesador Amd Ryzen 7 5700G 4.6 Ghz - AM4",
-        "price": 51.999,
-        "image": "/img/Ryzen75700G.jpeg",
-        "stock": 1,
-        "destacado": "true"
+        "id": "3",
+        "category" : "motorola",
+        "name": "Motorola Edge 30 Pro 256 GB 12 GB RAM",
+        "price": 189.999,
+        "image": "../img/motoedge.png",
+        "stock": 5 
         },
     {
-        "id": 4,
-        "category" : "microfono",
-        "name": "Micrófono HyperX Quadcast S Rgb",
-        "price": 20.499,
-        "image": "/img/microfono-hyperx.jpeg",
-        "stock": 1,
-        "destacado": "false"
+        "id": "4",
+        "category" : "motorola",
+        "name": "Moto G71 128 GB neptune green 6 GB RAM",
+        "price": 75.999,
+        "image": "../img/motog71.png",
+        "stock": 1
         },
     {
-        "id": 5,
-        "category" : "gabinete",
-        "name": "Gabinete Mid Tower Thermaltake V250 rgb",
-        "price": 9.599,
-        "image": "/img/gabinete-midtower.jpeg",
-        "stock": 1,
-        "destacado": "false"
+        "id": "5",
+        "category" : "xiaomi",
+        "name": "Xiaomi Redmi Note 9 Pro 128 GB gris interestelar 6 GB RAM",
+        "price": 102.362,
+        "image": "../img/xiaomi9.png",
+        "stock": 3
         },    
     {
-        "id": 6,
-        "category" : "motherboard",
-        "name": "Motherboard AM4 - Gigabyte GA-B450M DS3H",
-        "price": 11.299,
-        "image": "/img/motherboard-gigabyte.jpeg",
-        "stock": 1,
-        "destacado": "true"
+        "id": "6",
+        "category" : "xiaomi",
+        "name": "Xiaomi Redmi Note 10 5G 128 GB azul nocturno 6 GB RAM",
+        "price": 124.199 ,
+        "image": "../img/xiaomi10.png",
+        "stock": 9
         },
     {
-        "id": 7,
-        "category" : "memoria",
-        "name": "Memoria Ram DDR4 - 8Gb 3600 Mhz Corsair Vengeance",
-        "price": 7.999,
-        "image": "/img/memoria-ram.jpeg",
-        "stock": 1,
-        "destacado": "true"
+        "id": "7",
+        "category" : "xiaomi",
+        "name": "Xiaomi Redmi Note 11 128 GB gris grafito 8 GB RAM",
+        "price": 132.208,
+        "image": "../img/xiaomi11.png",
+        "stock": 6
 
-        },
-    {
-        "id": 8,
-        "category" : "disco Solido",
-        "name": "Disco Solido Ssd 480Gb Kingston A400",
-        "price": 9.299,
-        "image": "/img/disco-solido-ssd.jpeg",
-        "stock": 1,
-        "destacado": "true"
         }
 ]
 
 export const getProducts = () => {
     return new Promise((resolve) => {
         setTimeout(() =>{
-
             resolve(products)
             
-        }, 3000)
+        }, 500)
+    })
+}
+export const getProductById = (id) => {
+    return new Promise((resolve) => {
+        setTimeout(() =>{
+            resolve(products.find(prod => prod.id === id))
+        }, 500)
     })
 }
 
@@ -90,6 +80,6 @@ export const getByCategory = (category) => {
             const filteredProducts = products.filter((product) => product.category === category)
             resolve(filteredProducts)
             
-        }, 3000)
+        }, 500)
     })
 }

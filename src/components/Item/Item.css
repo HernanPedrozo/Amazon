@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 .CardItem {
-    width: 150px;
+    
+    width: 200px;
     padding: 30px;
     margin: 30px;
     font-size: 10px;
-    background-color: papayawhip;
+    background-color: rgb(255, 253, 253);
     border: 1px solid #e1e1e1;
     border-radius: 10px;
 }
@@ -16,14 +19,26 @@
 }
 
 .ItemHeader {
+    font-family: 'roboto', sans-serif; 
+    font-size: 16px;
+    font-weight: 500px;
+    align-items: center;
+    text-align: center;
+    color: #616161;
     display: flex;
     justify-content: center;
 }
 
 .Info {
-    font-size: 12px;
+    font-size: 1.5rem;
     display: flex;
     justify-content: space-around;
+    padding: 0 -1px -1px 0;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+    line-height: 10px;
+    font-weight: bold;
 }
 
 .ButtonDetail {
@@ -48,8 +63,8 @@
 }
 
 .ItemImg {
-    width: 100px;
-    height: 100px;
+    width: 210px;
+    height: 210px;
     object-fit: cover;
     object-position: center;
 }

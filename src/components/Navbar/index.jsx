@@ -1,32 +1,19 @@
 import Cartwidget from '../Cartwidget';
+import { Link } from 'react-router-dom';
 import './Navbar.css';
 
 
 function Navbar() {
 return (
 <div>
-    <nav className="mainNav">
-        <ul className="mainNav__lista">
-            <div className="logo">
-                <li>
-                    <button className="brand">KHP Shop</button>
-                </li>
-            </div>
-            <li className="mainNav__item">
-                <button className="mainNav__link">Inicio</button>
-            </li>
-            <li className="mainNav__item">
-            <button className="mainNav__link">Galeria</button>
-            </li>
-            <li className="mainNav__item">
-            <button className="mainNav__link">Contacto</button>
-            </li>
-            <li className="mainNav__item">
-            <button className="mainNav__link">
-                <Cartwidget/>
-            </button>
-            </li>
-        </ul>
+    <nav className="Navbar">
+        <Link to='/'>Inicio</Link>
+        <div className="Categories">
+            <Link to='/category/samsung' className="Option">Samsung</Link>
+            <Link to='/category/motorola' className="Option">Motorola</Link>
+            <Link to='/category/xiaomi' className="Option">Xiaomi</Link>
+        </div>
+        <Cartwidget/>
     </nav>
 </div> 
 )
